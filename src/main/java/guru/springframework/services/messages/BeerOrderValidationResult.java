@@ -1,8 +1,9 @@
-package guru.springframework.services.validate;
+package guru.springframework.services.messages;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.UUID;
@@ -11,6 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Builder
 @Data
+@EqualsAndHashCode
 public class BeerOrderValidationResult {
 
     private UUID beerOrderId;
