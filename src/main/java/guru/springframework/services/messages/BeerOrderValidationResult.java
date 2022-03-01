@@ -5,7 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -13,8 +15,10 @@ import java.util.UUID;
 @Builder
 @Data
 @EqualsAndHashCode
-public class BeerOrderValidationResult {
+@ToString
+public class BeerOrderValidationResult implements Serializable {
 
+    static final long serialVersionUID = -6961509388223848004L;
     private UUID beerOrderId;
     private boolean isValid;
 }
